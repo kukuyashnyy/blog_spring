@@ -11,4 +11,11 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/view/" p:suffix=".jsp" />
     <mvc:resources mapping="/static/**" location="/resources/" />
+    <bean class="com.zaxxer.hikari.HikariDataSource"
+          id="dataSource"
+          p:jdbcUrl="jdbc:mysql://localhost:3306/posts?serverTimezone=Europe/Kiev"
+          p:username="root"
+          p:password=""
+          p:driverClassName="com.mysql.cj.jdbc.Driver" />
+
 </beans>

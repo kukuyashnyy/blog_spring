@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: Asus
@@ -65,6 +66,17 @@
         <div class="col-lg-8">
 
             <!-- Title -->
+            <h1 class="mt-4">Add post</h1>
+            <div>
+                <form action="<c:url value="/posts"/>" method="post">
+                    <input type="text" placeholder="Title" name="title" id="title" />
+                    <input type="text" placeholder="Description" name="description" id="description" />
+                    <input type="submit">
+                </form>
+            </div>
+
+            <hr>
+
             <h1 class="mt-4">Post Title</h1>
 
             <!-- Author -->
