@@ -1,5 +1,6 @@
 package org.itstep.controller;
 
+import org.itstep.domain.entity.Category;
 import org.itstep.domain.entity.Post;
 import org.itstep.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/posts")
@@ -21,7 +24,7 @@ public class PostController {
     }
 
     @GetMapping
-    public String index() {
+    public String index(Model model) {
         return "post";
     }
 

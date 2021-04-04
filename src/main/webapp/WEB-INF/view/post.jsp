@@ -71,6 +71,7 @@
                 <form action="<c:url value="/posts"/>" method="post">
                     <input type="text" placeholder="Title" name="title" id="title" />
                     <input type="text" placeholder="Description" name="description" id="description" />
+                    <input type="text" placeholder="Category" name="category.name" id="category" />
                     <input type="submit">
                 </form>
             </div>

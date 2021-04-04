@@ -32,7 +32,7 @@ public class PostDaoImpl implements PostDao {
     }
 
     @Override
-    public void save(Post data) {
+    public Integer save(Post data) {
         try(Connection conn = getConnection()) {
             val stmt = conn.prepareStatement("INSERT into posts(title, description)" +
                     "values(?, ?)");
@@ -42,6 +42,7 @@ public class PostDaoImpl implements PostDao {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        return 0;
     }
 
     @Override
